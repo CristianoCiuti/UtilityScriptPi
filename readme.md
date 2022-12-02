@@ -1,1 +1,1 @@
-`wget "https://github.com/CristianoCiuti/unifiControllerPi/raw/master/script.sh" -O script.sh && chmod +x script.sh && ./script.sh`
+`wget "https://github.com/CristianoCiuti/unifiControllerPi/raw/master/install.sh" -O install.sh && chmod +x install.sh && ./install.sh`
