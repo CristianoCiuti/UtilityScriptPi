@@ -13,7 +13,7 @@ Run script:\
 ## Install OpenVPN
 
 Run script:\
-`wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-ovpn.sh" -O install-ovpn.sh && chmod +x install-ovpn.sh && ./install-ovpn.sh`
+`curl -L https://install.pivpn.io | bash`
 
 Create user:\
 `pivpn add`
