@@ -20,3 +20,4 @@ mkdir -p /home/$user/public
 wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/conf/smb.conf" -O /home/$user/smb/conf/smb.conf
 cat /home/$user/smb/conf/smb.conf | sudo tee --append /etc/samba/smb.conf
 echo "path = /home/$user/public" | sudo tee --append /etc/samba/smb.conf
+sudo systemctl restart smbd.service
