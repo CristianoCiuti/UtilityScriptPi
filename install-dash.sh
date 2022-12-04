@@ -18,7 +18,7 @@ git clone --depth 1 https://github.com/afaqurk/linux-dash.git /home/$user/git/li
 cd /home/$user/git/linux-dash && git reset --hard && git pull
 cd app/server
 npm install --production
-pm2 start index.js --port 7575
+pm2 start index.js -- --port 7575
 pm2 save
 
 # deleting script
