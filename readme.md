@@ -25,6 +25,7 @@ wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-dash.
 
 Run script:
 ```bash
+sudo timedatectl set-timezone Europe/Rome
 curl -L https://install.pivpn.io | bash
 ```
 
