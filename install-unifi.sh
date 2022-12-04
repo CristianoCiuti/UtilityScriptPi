@@ -1,4 +1,9 @@
 #! /bin/bash
+user=$1
+if [ -z "$user" ]
+then
+    user=pi
+fi
 
 # installing required package
 echo 'deb http://archive.raspbian.org/raspbian stretch main contrib non-free rpi' | sudo tee /etc/apt/sources.list.d/raspbian_stretch_for_mongodb.list
@@ -11,3 +16,10 @@ sudo apt install apt-transport-https -y
 echo 'deb https://www.ui.com/downloads/unifi/debian stable ubiquiti' | sudo tee /etc/apt/sources.list.d/100-ubnt-unifi.list
 sudo wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-repo.gpg
 sudo apt update && sudo apt install unifi -y
+
+# customizing auto backup folder
+mkdir -p /home/$user/unifi/backup && chmod -R 777 /home/$user/unifi/backup
+sudo cp /usr/lib/unifi/data/system.properties /usr/lib/unifi/data/system.properties.custom.backup
+sudo sed -i '/autobackup.dir/d' /usr/lib/unifi/data/system.properties
+echo "autobackup.dir=/home/$user/unifi/backup" | sudo tee --append /usr/lib/unifi/data/system.properties
+sudo systemctl restart unifi.service
