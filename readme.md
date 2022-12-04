@@ -10,6 +10,11 @@ Run script:\
 Run script:\
 `wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-smb.sh" -O install-smb.sh && chmod +x install-smb.sh && ./install-smb.sh`
 
+## Install Linux Dash
+
+Run script:\
+`wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-dash.sh" -O install-dash.sh && chmod +x install-dash.sh && ./install-dash.sh`
+
 ## Install OpenVPN
 
 Run script:\
