@@ -35,3 +35,10 @@ pivpn add
 ```
 
 NAT port forwarding: **UDP 1194**.
+
+## Swap size
+
+Run script:
+```bash
+wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/swap.sh" -O swap.sh && chmod +x swap.sh && ./swap.sh
+```
