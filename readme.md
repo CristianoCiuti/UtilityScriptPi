@@ -2,33 +2,33 @@
 
 ## Install Unifi Controller
 
-Run script:\
+Run script:
 ```bash
 wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-unifi.sh" -O install-unifi.sh && chmod +x install-unifi.sh && ./install-unifi.sh
 ```
 
 ## Install Samba
 
-Run script:\
+Run script:
 ```bash
 wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-smb.sh" -O install-smb.sh && chmod +x install-smb.sh && ./install-smb.sh
 ```
 
 ## Install Linux Dash
 
-Run script:\
+Run script:
 ```bash
 wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-dash.sh" -O install-dash.sh && chmod +x install-dash.sh && ./install-dash.sh
 ```
 
 ## Install OpenVPN
 
-Run script:\
+Run script:
 ```bash
 curl -L https://install.pivpn.io | bash
 ```
 
-Create user:\
+Create user:
 ```bash
 pivpn add
 ```
