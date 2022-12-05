@@ -18,15 +18,28 @@ wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-smb.s
 
 Run script:
 ```bash
-wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-dash.sh" -O install-dash.sh && chmod +x install-dash.sh && ./install-dash.sh
+wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-linuxdash.sh" -O install-linuxdash.sh && chmod +x install-linuxdash.sh && ./install-linuxdash.sh
+```
+
+## Install Grafana
+
+Run script:
+```bash
+wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-grafana.sh" -O install-grafana.sh && chmod +x install-grafana.sh && ./install-grafana.sh
+```
+
+## Install Netdata
+
+Run script:
+```bash
+wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-netdata.sh" -O install-netdata.sh && chmod +x install-netdata.sh && ./install-netdata.sh
 ```
 
 ## Install OpenVPN
 
 Run script:
 ```bash
-sudo timedatectl set-timezone Europe/Rome
-curl -L https://install.pivpn.io | bash
+wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-ovpn.sh" -O install-ovpn.sh && chmod +x install-ovpn.sh && ./install-ovpn.sh
 ```
 
 Create user:
