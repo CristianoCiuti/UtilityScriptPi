@@ -2,6 +2,8 @@
 
 ## Install Unifi Controller
 
+Need **OS Lite (32-bit)**.
+
 Run script:
 ```bash
 wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/install-unifi.sh" -O install-unifi.sh && chmod +x install-unifi.sh && ./install-unifi.sh
