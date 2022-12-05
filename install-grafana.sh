@@ -8,7 +8,7 @@ then
     user=pi
 fi
 
-# creating unifi folder
+# creating grafana folder
 mkdir -p /home/$user/grafana
 mv $base_dir/$script_name /home/$user/grafana/$script_name
 
