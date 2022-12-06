@@ -29,7 +29,7 @@ wget https://raw.githubusercontent.com/grafana/loki/v2.7.0/cmd/loki/loki-local-c
 sudo ln -s /home/$user/grafana/loki-local-config.yaml /usr/local/loki/loki-local-config.yaml
 wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/conf/loki.service" -O /home/$user/grafana/loki.service
 sudo ln -s /home/$user/grafana/loki.service /etc/systemd/system
-wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/conf/loki.yaml" -O /etc/grafana/provisioning/datasources/loki.yaml
+sudo wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/conf/loki.yaml" -O /etc/grafana/provisioning/datasources/loki.yaml
 
 # enabling service
 sudo systemctl daemon-reload
