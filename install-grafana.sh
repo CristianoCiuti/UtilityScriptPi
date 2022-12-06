@@ -25,7 +25,8 @@ wget https://github.com/grafana/loki/releases/download/v2.7.0/loki-linux-arm.zip
 sudo unzip /home/$user/grafana/loki-linux-arm.zip -d /usr/local/loki
 sudo chmod a+x /usr/local/loki/loki-linux-arm
 rm /home/$user/grafana/loki-linux-arm.zip
-wget https://raw.githubusercontent.com/grafana/loki/v2.7.0/cmd/loki/loki-local-config.yaml -O /usr/local/loki/loki-local-config.yaml
+wget https://raw.githubusercontent.com/grafana/loki/v2.7.0/cmd/loki/loki-local-config.yaml -O /home/$user/grafana/loki-local-config.yaml
+sudo ln -s /home/$user/grafana/loki-local-config.yaml /usr/local/loki/loki-local-config.yaml
 wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/conf/loki.service" -O /home/$user/grafana/loki.service
 sudo ln -s /home/$user/grafana/loki.service /etc/systemd/system
 

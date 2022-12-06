@@ -7,11 +7,14 @@ base_dir=$( dirname -- "$readlink"; )
 sudo timedatectl set-timezone Europe/Rome
 
 # installing Open VPN
-wget https://install.pivpn.io -O pivpn.sh && chmod +x pivpn.sh && ./pivpn.sh --unattended conf/pivpn.conf
+wget https://install.pivpn.io -O pivpn.sh
+wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/conf/pivpn.conf" -O pivpn.conf
+chmod +x pivpn.sh && ./pivpn.sh --unattended pivpn.conf
 
 # creating user
 pivpn add
 
 # deleting script
 rm pivpn.sh
+rm pivpn.conf
 rm $base_dir/$script_name
