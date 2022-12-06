@@ -1,0 +1,17 @@
+[Unit]
+Description = Loki service
+After = syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+PIDFile = /run/loki/loki.pid
+WorkingDirectory = /usr/local/loki
+ExecStartPre = -/bin/mkdir /run/loki
+ExecStart = /usr/local/loki/loki-linux-arm -config.file=loki-local-config.yaml
+ExecReload = /bin/kill -s HUP $MAINPID
+ExecStop = /bin/kill -s TERM $MAINPID
+ExecStopPost = /bin/rm -rf /run/loki
+Restart=always
+PrivateTmp = true
+
+[Install]
+WantedBy = multi-user.target
