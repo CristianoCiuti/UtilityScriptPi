@@ -34,9 +34,9 @@ sudo wget "https://github.com/CristianoCiuti/UtilityScriptPi/raw/master/conf/lok
 # enabling service
 sudo systemctl daemon-reload
 sudo systemctl enable loki.service
-sudo systemctl start loki.service
+sudo systemctl restart loki.service
 sudo systemctl enable grafana-server.service
-sudo systemctl start grafana-server.service
+sudo systemctl restart grafana-server.service
 
 # creating logger user for loki
 sudo htpasswd -c /home/$user/grafana/.htpasswd logger
